@@ -83,6 +83,9 @@ dependencies {
     kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.46.1")
     androidTestImplementation("com.squareup.okhttp3:mockwebserver:4.11.0")
     androidTestImplementation("app.cash.turbine:turbine:1.0.0")
+
+    debugImplementation("androidx.fragment:fragment-testing-manifest:1.6.0")
+    androidTestImplementation("androidx.fragment:fragment-testing:1.6.0")
 }
 
 kapt {
