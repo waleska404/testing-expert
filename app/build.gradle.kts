@@ -81,12 +81,11 @@ dependencies {
 
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.2")
-    implementation("androidx.compose.ui:ui:${composeUiVersion}")
-    implementation("androidx.compose.ui:ui-tooling-preview:${composeUiVersion}")
-    implementation("androidx.compose.material:material:${composeUiVersion}")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:${composeUiVersion}")
-    debugImplementation("androidx.compose.ui:ui-tooling:${composeUiVersion}")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:${composeUiVersion}")
+    implementation("androidx.compose.ui:ui:$composeUiVersion")
+    implementation("androidx.compose.ui:ui-tooling-preview:$composeUiVersion")
+    implementation("androidx.compose.material:material:$composeUiVersion")
+    implementation("androidx.compose.material:material-icons-extended:$composeUiVersion")
+    implementation("androidx.navigation:navigation-compose:2.6.0")
 
     testImplementation(project(":appTestShared"))
     testImplementation("junit:junit:4.13.2")
@@ -107,6 +106,10 @@ dependencies {
 
     debugImplementation("androidx.fragment:fragment-testing-manifest:1.6.0")
     androidTestImplementation("androidx.fragment:fragment-testing:1.6.0")
+
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:$composeUiVersion")
+    debugImplementation("androidx.compose.ui:ui-tooling:$composeUiVersion")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:$composeUiVersion")
 }
 
 kapt {
