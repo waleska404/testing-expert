@@ -109,6 +109,8 @@ dependencies {
     testImplementation("org.robolectric:robolectric:4.9.2")
     testImplementation("androidx.compose.ui:ui-test-junit4:$composeUiVersion")
     testImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation("com.google.dagger:hilt-android-testing:2.46.1")
+    kaptTest("com.google.dagger:hilt-android-compiler:2.46.1")
 
     androidTestImplementation(project(":appTestShared"))
     androidTestImplementation("androidx.test.ext:junit-ktx:1.1.5")
