@@ -1,6 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
-val composeUiVersion = "1.4.3"
+val composeUiVersion: String by rootProject.project
 
 plugins {
     id("com.android.application")
@@ -66,6 +66,9 @@ android {
                 useLegacyPackaging = true
             }
         }
+        unitTests {
+            isIncludeAndroidResources = true
+        }
     }
 }
 
@@ -102,6 +105,10 @@ dependencies {
     testImplementation("io.mockk:mockk:1.13.3")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1")
     testImplementation("app.cash.turbine:turbine:1.0.0")
+
+    testImplementation("org.robolectric:robolectric:4.9.2")
+    testImplementation("androidx.compose.ui:ui-test-junit4:$composeUiVersion")
+    testImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     androidTestImplementation(project(":appTestShared"))
     androidTestImplementation("androidx.test.ext:junit-ktx:1.1.5")
